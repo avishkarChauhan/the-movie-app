@@ -1,0 +1,21 @@
+<p-dialog header="{{movie.title}}" [(visible)]="display" [modal]="true" [responsive]="true" [style]="{width: '650px', minWidth: '200px'}" [minY]="70" 
+        [maximizable]="true" [baseZIndex]="10000">
+  <div class = "ui-g">
+      <div class = "ui-g-4">Director's Name</div> <div class = "ui-g-8">{{movie.director}}</div>
+  </div>
+  <div class = "ui-g">
+    <div class = "ui-g-4">Movie Description</div> <div class = "ui-g-8">{{movie.description}}</div>
+</div>
+<div class = "ui-g">
+    <div class = "ui-g-4">Producer's Name</div> <div class = "ui-g-8">{{movie.producer}}</div>
+</div>
+<div class = "ui-g">
+    <div class = "ui-g-4">Year Of Release</div> <div class = "ui-g-8">{{movie.release_date}}</div>
+</div>
+
+<div class = "ui-g">
+    <div class = "ui-g-4">Movie's Rating</div> <div class = "ui-g-8">{{movie.rt_score}}</div>
+</div>
+        <p-footer>
+        </p-footer>
+</p-dialog>

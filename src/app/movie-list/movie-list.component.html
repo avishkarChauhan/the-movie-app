@@ -1,0 +1,20 @@
+<h3 class="center">Movie List</h3>
+<p-table [value]="movieList">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Title</th>
+            <th>Directors Name</th>
+            <th>Rating</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-movie>
+        <tr>
+            <td><a style = "cursor : pointer" (click) = "getMovieDetail(movie)">{{movie.title}}</a></td>
+            <td>{{movie.director}}</td>
+            <td>{{movie.rt_score}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<app-movie-detail *ngIf = "showDialog" [movie] = "movieClicked"></app-movie-detail>
+
